@@ -62,12 +62,12 @@
             			{% endif %}
         		{% endfor %}
     			</ul>
-<span>one</span>
+<span>two</span>
 {% for collection in site.collections %}
   <h2>Items from {{ collection.files }}</h2>
   <ul>
     {% for item in site[collection.files] %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      <li><a href="{{ item.url }}">{{ item.url }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}
