@@ -53,24 +53,7 @@
                             !-->
                         </p>
                         <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
-
-			{% assign doclist = site.pages | sort: 'url'  %}
-    			<ul>
-       			{% for doc in doclist %}
-            			{% if doc.name contains '.md' or doc.name contains '.html' or doc.name contains '.jpg' %}
-                			<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
-            			{% endif %}
-        		{% endfor %}
-    			</ul>
-<span>one</span>
-{% for collection in site.collections %}
-  <h2>Items from {{ collection.files }}</h2>
-  <ul>
-    {% for item in site[collection.files] %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+			<span>updated</span>
                     </div>
                 </div>
             </div>
