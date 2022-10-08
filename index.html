@@ -63,7 +63,7 @@
 <!--
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
-	{% if myimage.extname == ".jpeg" or ".jpg" %}
+	{% if myimage.extname == ".jpeg" or myimage.extname == ".jpg" or myimage.extname == ".png" %}
   		{{ myimage.path }} - {{ myimage.name }} - {{ myimage.basename }} - {{ myimage.extname }}<br/>
 	{% endif %}
 {% endfor %}
@@ -71,7 +71,7 @@
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
 	{% if myimage.extname == ".jpeg" or myimage.extname == ".jpg" or myimage.extname == ".png" %}
-  		{{ myimage.path }} - {{ myimage.name }} - {{ myimage.basename }} - {{ myimage.extname }}<br/>
+  		<a href="{{ site.url }}{{ myimage.path }}">{{ myimage.name }}</a><br/>
 	{% endif %}
 {% endfor %}
 
