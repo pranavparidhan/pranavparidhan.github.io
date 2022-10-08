@@ -54,10 +54,17 @@
                         </p>
                         <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
 			<span>updated</span>
-{% assign image_files = site.static_files | where: "image", true %}
+{% assign image_files = site.static_files %}
 {% for myimage in image_files %}
   {{ myimage.path }}<br/>
 {% endfor %}
+
+<!--
+{% assign image_files = site.static_files | where: "image", true %}
+{% for myimage in image_files %}
+  {{ myimage.path }}
+{% endfor %}
+-->
                     </div>
                 </div>
             </div>
