@@ -61,6 +61,8 @@
                 			<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
             			{% endif %}
         		{% endfor %}
+    			</ul>
+<span>one</span>
 {% for collection in site.collections %}
   <h2>Items from {{ collection.files }}</h2>
   <ul>
@@ -69,9 +71,6 @@
     {% endfor %}
   </ul>
 {% endfor %}
-
-    			</ul>
-
                     </div>
                 </div>
             </div>
