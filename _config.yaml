@@ -14,7 +14,7 @@
 # url                      : https://pranavparidhan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 # baseurl                  : "" # the subpath of your site, e.g. "/blog"
 
-# - scope:
-#      path: "classifieds"
-#    values:
-#      image: true
+ - scope:
+      path: "classifieds"
+    values:
+      image: true
