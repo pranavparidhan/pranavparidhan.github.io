@@ -63,7 +63,9 @@
 <!-- -->
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
-  {{ myimage.path }} - {{ myimage.name }} - {{ myimage.basename }} - {{ myimage.extname }}<br/>
+	{% if myimage.extname == '.jpeg' or '.jpg' %}
+  		{{ myimage.path }} - {{ myimage.name }} - {{ myimage.basename }} - {{ myimage.extname }}<br/>
+	{% endif %}
 {% endfor %}
 
                     </div>
