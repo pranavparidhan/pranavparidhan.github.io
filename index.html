@@ -61,11 +61,14 @@
                 			<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
             			{% endif %}
         		{% endfor %}
-			{% for files in site.collections %}
-			  <li>
-			    <h3 class="post-meta">Files {{ files.url }}</h3>
-			  </li>
-			{% endfor %}
+{% for collection in site.collections %}
+  <h2>Items from {{ collection.files }}</h2>
+  <ul>
+    {% for item in site[collection.files] %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
     			</ul>
 
