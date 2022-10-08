@@ -61,6 +61,12 @@
                 			<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
             			{% endif %}
         		{% endfor %}
+			{% for files in site.collections %}
+			  <li>
+			    <h3 class="post-meta">Files {{ files.url }}</h3>
+			  </li>
+			{% endfor %}
+
     			</ul>
 
                     </div>
