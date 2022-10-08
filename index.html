@@ -54,12 +54,14 @@
                         </p>
                         <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
 			<br/>
+<!--
+temporarily blocked
 			<h3>Section 1</h3>
 {% assign image_files = site.static_files %}
 {% for myimage in image_files %}
   {{ myimage.path }}<br/>
 {% endfor %}
-<h3>Section 2</h3>
+-->
 <!--
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
@@ -68,13 +70,16 @@
 	{% endif %}
 {% endfor %}
  -->
+<!--
+temporarily blocked
+<h3>Section 2</h3>
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
 	{% if myimage.extname == ".jpeg" or myimage.extname == ".jpg" or myimage.extname == ".png" %}
   		<a href="{{ site.url }}{{ myimage.path }}">{{ myimage.name }}</a><br/>
 	{% endif %}
 {% endfor %}
-
+-->
                     </div>
                 </div>
             </div>
