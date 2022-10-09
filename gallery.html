@@ -471,7 +471,7 @@ img {
 <div class="container">
 	<div class="row">
 <div class="gallery">
-{% assign image_files = site.static_files %}
+{% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
 	{% if myimage.extname == ".jpeg" or myimage.extname == ".jpg" or myimage.extname == ".png" %}
 
@@ -586,17 +586,14 @@ img {
 popup.init()
 
 </script>
-		<h2>Create your snippet's HTML, CSS and Javascript in the editor tabs</h2>
 	</div>
 </div>
-
-
-			<h3>Section 1</h3>
+<!-- temporarily blocked
 {% assign image_files = site.static_files %}
 {% for myimage in image_files %}
   {{ myimage.path }}<br/>
 {% endfor %}
-<!-- temporarily blocked -->
+ -->
 <!--
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
@@ -605,7 +602,7 @@ popup.init()
 	{% endif %}
 {% endfor %}
  -->
-
+<!-- temporarily blocked
 <h3>Section 2</h3>
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}
@@ -613,7 +610,7 @@ popup.init()
   		<a href="{{ site.url }}{{ myimage.path }}">{{ myimage.name }}</a><br/>
 	{% endif %}
 {% endfor %}
-<!-- temporarily blocked -->
+ -->
                     </div>
                 </div>
             </div>
