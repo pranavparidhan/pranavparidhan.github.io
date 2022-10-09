@@ -471,6 +471,18 @@ img {
 <div class="container">
 	<div class="row">
 <div class="gallery">
+{% assign image_files = site.static_files %}
+{% for myimage in image_files %}
+	{% if myimage.extname == ".jpeg" or myimage.extname == ".jpg" or myimage.extname == ".png" %}
+
+	<figure>
+		<img src="{{ site.url }}{{ myimage.path }}?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+		<figcaption>{{ myimage.name }}</figcaption>
+	</figure>
+
+	{% endif %}
+{% endfor %}
+<!-- 
   <figure>
     <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
     <figcaption>Daytona Beach <small>United States</small></figcaption>
@@ -493,7 +505,6 @@ img {
     <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
     <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
   </figure>
-<!--
   <figure>
     <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
     <figcaption>Highlands <small>United States</small></figcaption>
@@ -525,7 +536,7 @@ img {
     <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
     <figcaption>Highlands <small>United States</small></figcaption>
   </figure>
--->
+ -->
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
